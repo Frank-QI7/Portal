@@ -1,7 +1,6 @@
 import React from 'react';
 import {Grid,Container} from '@material-ui/core'
 import Header from "../components/header"
-// import Head from "next/head";
 import Team from "../components/team"
 import HomeCarousel from "../components/carousel_card"
 import Story from "../components/story"
@@ -11,7 +10,6 @@ import Award from "../components/award"
 import Footer from "../components/footer"
 import Contact from "../components/contact_us"
 import Layout from "../components/layout";
-import Link from "next/link";
 
 
 function Home(props) {
