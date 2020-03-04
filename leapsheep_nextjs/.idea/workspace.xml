@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="76fd2afc-1054-4bb9-b668-e18ea5bdb039" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="$USER_HOME$/MavenRepository" />
+        <option name="mavenHome" value="$USER_HOME$/maven" />
+        <option name="userSettingsFile" value="$USER_HOME$/maven/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YbhmgUa6PhgxYtrzmEqjytshQp" />
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/components" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="76fd2afc-1054-4bb9-b668-e18ea5bdb039" name="Default Changelist" comment="" />
+      <created>1583217361872</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583217361872</updated>
+      <workItem from="1583217363813" duration="195000" />
+      <workItem from="1583217565023" duration="14263000" />
+      <workItem from="1583274809797" duration="14472000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="274" y="218" key="IDE.errors.dialog" timestamp="1583281335104">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="274" y="218" key="IDE.errors.dialog/-1865.23.1865.1057/0.23.1440.877@0.23.1440.877" timestamp="1583281335104" />
+    <state x="319" y="218" key="IDE.errors.dialog/55.23.1385.877@55.23.1385.877" timestamp="1583241331960" />
+    <state x="479" y="310" key="com.intellij.ide.util.TipDialog" timestamp="1583274809033">
+      <screen x="54" y="23" width="1386" height="877" />
+    </state>
+    <state x="479" y="310" key="com.intellij.ide.util.TipDialog/54.23.1386.877@54.23.1386.877" timestamp="1583274809033" />
+    <state x="358" y="235" width="665" height="486" key="find.popup" timestamp="1583280027965">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="358" y="235" width="665" height="486" key="find.popup/-1865.23.1865.1057/0.23.1440.877@0.23.1440.877" timestamp="1583280027965" />
+    <state x="399" y="235" width="639" height="486" key="find.popup/55.23.1385.877@55.23.1385.877" timestamp="1583235907323" />
+  </component>
+</project>
