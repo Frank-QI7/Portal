@@ -15,6 +15,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -33,9 +36,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -72,10 +76,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="274" y="218" key="IDE.errors.dialog" timestamp="1583281335104">
+    <state x="274" y="218" key="IDE.errors.dialog" timestamp="1583302789774">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="274" y="218" key="IDE.errors.dialog/-1865.23.1865.1057/0.23.1440.877@0.23.1440.877" timestamp="1583281335104" />
+    <state x="274" y="218" key="IDE.errors.dialog/-1865.23.1865.1057/0.23.1440.877@0.23.1440.877" timestamp="1583302789774" />
     <state x="319" y="218" key="IDE.errors.dialog/55.23.1385.877@55.23.1385.877" timestamp="1583241331960" />
     <state x="479" y="310" key="com.intellij.ide.util.TipDialog" timestamp="1583274809033">
       <screen x="54" y="23" width="1386" height="877" />

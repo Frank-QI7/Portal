@@ -108,7 +108,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _outer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../outer */ "./components/outer/index.js");
 /* harmony import */ var _components_member_intro_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/member_intro/index */ "./components/member_intro/index.js");
-var _jsxFileName = "/Users/yunqingqi/go/src/Leapsheep_Protal/leapsheep_nextjs/components/advisors/index.js";
+var _jsxFileName = "/Users/yunqingqi/Documents/GitHub/Portal/leapsheep_nextjs/components/advisors/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -222,7 +222,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _outer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../outer */ "./components/outer/index.js");
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/yunqingqi/go/src/Leapsheep_Protal/leapsheep_nextjs/components/award/index.js";
+var _jsxFileName = "/Users/yunqingqi/Documents/GitHub/Portal/leapsheep_nextjs/components/award/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -310,19 +310,16 @@ function component() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var antd_lib_carousel_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! antd/lib/carousel/style/css */ "antd/lib/carousel/style/css");
-/* harmony import */ var antd_lib_carousel_style_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd_lib_carousel_style_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var antd_lib_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/carousel */ "antd/lib/carousel");
-/* harmony import */ var antd_lib_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_carousel__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _outer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../outer */ "./components/outer/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_material_ui_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-material-ui-carousel */ "react-material-ui-carousel");
+/* harmony import */ var react_material_ui_carousel__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_material_ui_carousel__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _outer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../outer */ "./components/outer/index.js");
+var _jsxFileName = "/Users/yunqingqi/Documents/GitHub/Portal/leapsheep_nextjs/components/carousel_card/index.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-
-var _jsxFileName = "/Users/yunqingqi/go/src/Leapsheep_Protal/leapsheep_nextjs/components/carousel_card/index.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 
@@ -334,7 +331,7 @@ function HomeCarousel() {
       lineNumber: 8
     },
     __self: this
-  }, __jsx(_outer__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, __jsx(_outer__WEBPACK_IMPORTED_MODULE_3__["default"], {
     name: "Testimonials",
     Component: component,
     color: "#fafafa",
@@ -347,12 +344,7 @@ function HomeCarousel() {
 }
 
 function component() {
-  return __jsx(antd_lib_carousel__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    dots: true,
-    dotPosition: "bottom",
-    autoplay: true,
-    autoplaySpeed: 8000,
-    speed: 700,
+  return __jsx(react_material_ui_carousel__WEBPACK_IMPORTED_MODULE_2___default.a, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
@@ -364,14 +356,14 @@ function component() {
       lineNumber: 16
     },
     __self: this
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Container"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Container"], {
     maxWidth: "md",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
     },
     __self: this
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
     container: true,
     spacing: 4,
     justify: "center",
@@ -381,7 +373,7 @@ function component() {
       lineNumber: 18
     },
     __self: this
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
     item: true,
     md: 3,
     style: {
@@ -393,7 +385,7 @@ function component() {
       lineNumber: 19
     },
     __self: this
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Avatar"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Avatar"], {
     className: "avatar",
     alt: "Mark Keough",
     src: "/Mark_Keough.png",
@@ -421,7 +413,7 @@ function component() {
       lineNumber: 23
     },
     __self: this
-  }, "Founder & CEO of Intrinsic Learning"))), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
+  }, "Founder & CEO of Intrinsic Learning"))), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
     item: true,
     xs: 11,
     sm: 9,
@@ -431,7 +423,7 @@ function component() {
       lineNumber: 27
     },
     __self: this
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Paper"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Paper"], {
     className: "words",
     variant: "outlined",
     __source: {
@@ -445,14 +437,14 @@ function component() {
       lineNumber: 37
     },
     __self: this
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Container"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Container"], {
     maxWidth: "md",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 38
     },
     __self: this
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
     container: true,
     spacing: 4,
     justify: "center",
@@ -462,7 +454,7 @@ function component() {
       lineNumber: 39
     },
     __self: this
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
     item: true,
     md: 3,
     style: {
@@ -473,7 +465,7 @@ function component() {
       lineNumber: 40
     },
     __self: this
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Avatar"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Avatar"], {
     className: "avatar",
     alt: "Matthew Pyke",
     src: "/Matthew_Pyke.png",
@@ -501,7 +493,7 @@ function component() {
       lineNumber: 44
     },
     __self: this
-  }, "TilliT Market Fit Lead"))), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
+  }, "TilliT Market Fit Lead"))), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
     item: true,
     xs: 11,
     sm: 9,
@@ -511,7 +503,7 @@ function component() {
       lineNumber: 48
     },
     __self: this
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Paper"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Paper"], {
     className: "words",
     variant: "outlined",
     __source: {
@@ -525,14 +517,14 @@ function component() {
       lineNumber: 58
     },
     __self: this
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Container"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Container"], {
     maxWidth: "md",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 59
     },
     __self: this
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
     container: true,
     spacing: 4,
     justify: "center",
@@ -542,7 +534,7 @@ function component() {
       lineNumber: 60
     },
     __self: this
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
     item: true,
     md: 3,
     style: {
@@ -553,7 +545,7 @@ function component() {
       lineNumber: 61
     },
     __self: this
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Avatar"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Avatar"], {
     className: "avatar",
     alt: "Tina McIntosh",
     src: "/Tina_McIntosh.png",
@@ -581,7 +573,7 @@ function component() {
       lineNumber: 65
     },
     __self: this
-  }, "CEO of Brain Changer"))), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
+  }, "CEO of Brain Changer"))), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
     item: true,
     xs: 11,
     sm: 9,
@@ -591,7 +583,7 @@ function component() {
       lineNumber: 69
     },
     __self: this
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Paper"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Paper"], {
     className: "words",
     variant: "outlined",
     __source: {
@@ -623,7 +615,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var emailjs_com__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! emailjs-com */ "emailjs-com");
 /* harmony import */ var emailjs_com__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(emailjs_com__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/yunqingqi/go/src/Leapsheep_Protal/leapsheep_nextjs/components/contact_us/index.js";
+var _jsxFileName = "/Users/yunqingqi/Documents/GitHub/Portal/leapsheep_nextjs/components/contact_us/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -877,7 +869,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var emailjs_com__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(emailjs_com__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _material_ui_icons_Twitter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/icons/Twitter */ "@material-ui/icons/Twitter");
 /* harmony import */ var _material_ui_icons_Twitter__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Twitter__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/yunqingqi/go/src/Leapsheep_Protal/leapsheep_nextjs/components/footer/index.js";
+var _jsxFileName = "/Users/yunqingqi/Documents/GitHub/Portal/leapsheep_nextjs/components/footer/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -1070,7 +1062,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_KeyboardArrowUp__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_KeyboardArrowUp__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_8__);
-var _jsxFileName = "/Users/yunqingqi/go/src/Leapsheep_Protal/leapsheep_nextjs/components/header/index.js";
+var _jsxFileName = "/Users/yunqingqi/Documents/GitHub/Portal/leapsheep_nextjs/components/header/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -1451,7 +1443,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_google_analytics__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/google_analytics */ "./components/utils/google_analytics.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/yunqingqi/go/src/Leapsheep_Protal/leapsheep_nextjs/components/layout.js";
+var _jsxFileName = "/Users/yunqingqi/Documents/GitHub/Portal/leapsheep_nextjs/components/layout.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
@@ -1605,7 +1597,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_Twitter__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Twitter__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _material_ui_icons_LinkedIn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/icons/LinkedIn */ "@material-ui/icons/LinkedIn");
 /* harmony import */ var _material_ui_icons_LinkedIn__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_LinkedIn__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/yunqingqi/go/src/Leapsheep_Protal/leapsheep_nextjs/components/member_intro/index.js";
+var _jsxFileName = "/Users/yunqingqi/Documents/GitHub/Portal/leapsheep_nextjs/components/member_intro/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -1886,7 +1878,7 @@ function IntroRight(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/yunqingqi/go/src/Leapsheep_Protal/leapsheep_nextjs/components/outer/index.js";
+var _jsxFileName = "/Users/yunqingqi/Documents/GitHub/Portal/leapsheep_nextjs/components/outer/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -1948,7 +1940,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _visionbox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../visionbox */ "./components/visionbox/index.js");
-var _jsxFileName = "/Users/yunqingqi/go/src/Leapsheep_Protal/leapsheep_nextjs/components/service/index.js";
+var _jsxFileName = "/Users/yunqingqi/Documents/GitHub/Portal/leapsheep_nextjs/components/service/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -2245,7 +2237,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _visionbox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../visionbox */ "./components/visionbox/index.js");
-var _jsxFileName = "/Users/yunqingqi/go/src/Leapsheep_Protal/leapsheep_nextjs/components/story/index.js";
+var _jsxFileName = "/Users/yunqingqi/Documents/GitHub/Portal/leapsheep_nextjs/components/story/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -2418,7 +2410,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _outer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../outer */ "./components/outer/index.js");
 /* harmony import */ var _components_member_intro_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/member_intro/index */ "./components/member_intro/index.js");
-var _jsxFileName = "/Users/yunqingqi/go/src/Leapsheep_Protal/leapsheep_nextjs/components/team/index.js";
+var _jsxFileName = "/Users/yunqingqi/Documents/GitHub/Portal/leapsheep_nextjs/components/team/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -2661,7 +2653,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/yunqingqi/go/src/Leapsheep_Protal/leapsheep_nextjs/components/visionbox/index.js";
+var _jsxFileName = "/Users/yunqingqi/Documents/GitHub/Portal/leapsheep_nextjs/components/visionbox/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -4483,13 +4475,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/footer */ "./components/footer/index.js");
 /* harmony import */ var _components_contact_us__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/contact_us */ "./components/contact_us/index.js");
 /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/layout */ "./components/layout.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_12__);
-var _jsxFileName = "/Users/yunqingqi/go/src/Leapsheep_Protal/leapsheep_nextjs/pages/index.js";
+var _jsxFileName = "/Users/yunqingqi/Documents/GitHub/Portal/leapsheep_nextjs/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-
- // import Head from "next/head";
 
 
 
@@ -4507,19 +4495,19 @@ function Home(props) {
     title: "Home - Leapsheep",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 18
     },
     __self: this
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 19
     },
     __self: this
   }, __jsx(_components_header__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 21
     },
     __self: this
   }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
@@ -4529,7 +4517,7 @@ function Home(props) {
     alignItems: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 24
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Container"], {
@@ -4540,13 +4528,13 @@ function Home(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 25
     },
     __self: this
   }, "Empowering Business Builders to Achieve Hyper Growth in the New Economy")), __jsx(_components_carousel_card__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 31
     },
     __self: this
   }), __jsx(_components_story__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -4555,37 +4543,37 @@ function Home(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 34
     },
     __self: this
   }), __jsx(_components_service__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 38
     },
     __self: this
   }), __jsx(_components_team__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 41
     },
     __self: this
   }), __jsx(_components_advisors__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 44
     },
     __self: this
   }), __jsx(_components_award__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 47
     },
     __self: this
   }), __jsx(_components_contact_us__WEBPACK_IMPORTED_MODULE_10__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 50
     },
     __self: this
   }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Container"], {
@@ -4593,7 +4581,7 @@ function Home(props) {
     className: "google_map",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 53
     },
     __self: this
   }, __jsx("iframe", {
@@ -4608,13 +4596,13 @@ function Home(props) {
     allowFullScreen: "allowfullscreen",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 54
     },
     __self: this
   })), __jsx(_components_footer__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 60
     },
     __self: this
   })));
@@ -4631,7 +4619,7 @@ function Home(props) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/yunqingqi/go/src/Leapsheep_Protal/leapsheep_nextjs/pages/index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! /Users/yunqingqi/Documents/GitHub/Portal/leapsheep_nextjs/pages/index.js */"./pages/index.js");
 
 
 /***/ }),
@@ -4721,28 +4709,6 @@ module.exports = require("@material-ui/icons/Menu");
 /***/ (function(module, exports) {
 
 module.exports = require("@material-ui/icons/Twitter");
-
-/***/ }),
-
-/***/ "antd/lib/carousel":
-/*!************************************!*\
-  !*** external "antd/lib/carousel" ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("antd/lib/carousel");
-
-/***/ }),
-
-/***/ "antd/lib/carousel/style/css":
-/*!**********************************************!*\
-  !*** external "antd/lib/carousel/style/css" ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("antd/lib/carousel/style/css");
 
 /***/ }),
 
@@ -4886,6 +4852,17 @@ module.exports = require("react-ga");
 /***/ (function(module, exports) {
 
 module.exports = require("react-is");
+
+/***/ }),
+
+/***/ "react-material-ui-carousel":
+/*!*********************************************!*\
+  !*** external "react-material-ui-carousel" ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-material-ui-carousel");
 
 /***/ }),
 

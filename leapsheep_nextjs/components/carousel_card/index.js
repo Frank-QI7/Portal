@@ -1,6 +1,6 @@
 import React from 'react';
 import {Grid, Container, Avatar, Paper} from '@material-ui/core'
-import {Carousel} from "antd"
+import Carousel from 'react-material-ui-carousel'
 import Outer from "../outer"
 
 function HomeCarousel() {
@@ -12,7 +12,7 @@ function HomeCarousel() {
  }
  function component() {
         return (
-            <Carousel dots dotPosition="bottom" autoplay autoplaySpeed={8000} speed={700}>
+            <Carousel>
                 <div>
                     <Container maxWidth="md">
                         <Grid container spacing={4} justify="center" alignItems="center">

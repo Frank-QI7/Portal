@@ -4797,7 +4797,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      (0, _sourceMapSupport.rewriteStacktrace)(error, "/Users/yunqingqi/go/src/Leapsheep_Protal/leapsheep_nextjs/.next");
+      (0, _sourceMapSupport.rewriteStacktrace)(error, "/Users/yunqingqi/Documents/GitHub/Portal/leapsheep_nextjs/.next");
       return error;
     }
   };
