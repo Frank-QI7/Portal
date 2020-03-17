@@ -84,7 +84,7 @@ export default function BackToTop(props) {
                         <div className="header_inner_left">
                                 <div className="logo_wrapper">
                                     <div className="q_logo  hh">
-                                            <a href="https://leapsheep.biz">
+                                            <a href="/">
                                                 <img className="normal" src="/logo.svg" alt="Logo"/>
                                             </a>
                                     </div>

@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1572,7 +1572,7 @@ function BackToTop(props) {
     },
     __self: this
   }, __jsx("a", {
-    href: "https://leapsheep.biz",
+    href: "/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 87
@@ -1833,7 +1833,7 @@ function Layout(props) {
     },
     __self: this
   }), __jsx("link", {
-    rel: "icon",
+    rel: "shortcut icon",
     href: "/favicon.ico",
     __source: {
       fileName: _jsxFileName,
@@ -4967,7 +4967,7 @@ function Home(props) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
