@@ -1,23 +1,45 @@
 import React from 'react';
-import {Grid, Typography, Paper, InputBase,Fab} from "@material-ui/core"
-import {LocationOn,Email,Person,Create} from "@material-ui/icons"
+import {Grid, Typography, Paper, InputBase,Fab,Dialog,IconButton} from "@material-ui/core"
+import {LocationOn,Email,Person,Create,Close} from "@material-ui/icons"
+import {Alert} from "@material-ui/lab"
 import emailjs from 'emailjs-com';
 
 function Contact() {
+    const [open, setOpen] = React.useState(false);
+
     function sendEmail(e) {
         e.preventDefault();
-
         emailjs.sendForm('gmail_test', 'leapsheep', e.target, 'user_ktTMKKT4No1antI4E4MSD')
             .then((result) => {
                 console.log(result.text);
+                setOpen(true)
             }, (error) => {
-                console.log(error.text);
+                // console.log(error.text);
             });
     }
 
 
     return(
         <div id="contact">
+     <Dialog open={open}>
+        <Alert
+          action={
+            <IconButton
+              aria-label="close"
+              color="inherit"
+              size="small"
+              onClick={() => {
+                setOpen(false);
+              }}
+            >
+              <Close fontSize="inherit" />
+            </IconButton>
+          }
+        >
+          Thanks for contacting us!
+        </Alert>
+     </Dialog>
+
             <Grid container justify="center" alignItems="stretch">
 
                 {/*contact_us*/}
@@ -74,6 +96,7 @@ function Contact() {
                     </form>
                 </Grid>
             </Grid>
+        
         </div>
     )
 

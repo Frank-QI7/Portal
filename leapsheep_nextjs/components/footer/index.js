@@ -1,22 +1,47 @@
 import React from 'react';
-import {Grid, Typography, Paper, InputBase, Fab, IconButton} from "@material-ui/core";
+import {Grid, Typography, Paper, InputBase, Fab, IconButton,Dialog} from "@material-ui/core";
+import {Close} from "@material-ui/icons"
+import {Alert} from "@material-ui/lab"
+
 import emailjs from 'emailjs-com';
 import TwitterIcon from "@material-ui/icons/Twitter";
 const message = `Sign up and get early access to our beta program`;
 
 function Footer() {
+    const [open, setOpen] = React.useState(false);
+
     function sendEmail(e) {
         e.preventDefault();
         emailjs.sendForm('gmail_test', 'leapsheep', e.target, 'user_ktTMKKT4No1antI4E4MSD')
             .then((result) => {
                 console.log(result.text);
+                setOpen(true)
             }, (error) => {
-                console.log(error.text);
+                // console.log(error.text);
             });
     }
 
     return (
     <div id="footer" style={{backgroundColor:"#402308", padding:"66px 0 28px"}}>
+        <Dialog open={open}>
+        <Alert
+          action={
+            <IconButton
+              aria-label="close"
+              color="inherit"
+              size="small"
+              onClick={() => {
+                setOpen(false);
+              }}
+            >
+              <Close fontSize="inherit" />
+            </IconButton>
+          }
+        >
+          Thanks for contacting us!
+        </Alert>
+     </Dialog>
+     
         <Grid container  wrap="nowrap" spacing={2} justify="center" direction="column" alignItems="center">
                 <Grid item xs={8} sm={6}  md={6} lg={8}>
                     <Typography className="sign_up" variant="h5">{message}</Typography>

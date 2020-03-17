@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -301,6 +301,283 @@ function component() {
 
 /***/ }),
 
+/***/ "./components/carousel_card/Carousel.js":
+/*!**********************************************!*\
+  !*** ./components/carousel_card/Carousel.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Carousel; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var auto_bind__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! auto-bind */ "auto-bind");
+/* harmony import */ var auto_bind__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(auto_bind__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/icons/FiberManualRecord */ "@material-ui/icons/FiberManualRecord");
+/* harmony import */ var _material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _material_ui_icons_NavigateBefore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons/NavigateBefore */ "@material-ui/icons/NavigateBefore");
+/* harmony import */ var _material_ui_icons_NavigateBefore__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_NavigateBefore__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _material_ui_icons_NavigateNext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/NavigateNext */ "@material-ui/icons/NavigateNext");
+/* harmony import */ var _material_ui_icons_NavigateNext__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_NavigateNext__WEBPACK_IMPORTED_MODULE_5__);
+var _jsxFileName = "/Users/yunqingqi/Documents/GitHub/Portal/leapsheep_nextjs/components/carousel_card/Carousel.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+
+class Carousel extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: 0,
+      autoPlay: this.props.autoPlay !== undefined ? this.props.autoPlay : true,
+      interval: this.props.interval !== undefined ? this.props.interval : 4000
+    };
+    this.timer = null;
+    auto_bind__WEBPACK_IMPORTED_MODULE_2___default()(this);
+  }
+
+  componentDidMount() {
+    this.start();
+  }
+
+  componentWillUnmount() {
+    this.stop();
+  }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.autoPlay !== prevState.autoPlay || nextProps.interval !== prevState.interval) {
+      return {
+        autoPlay: nextProps.autoPlay !== undefined ? nextProps.autoPlay : true,
+        interval: nextProps.interval !== undefined ? nextProps.interval : 4000
+      };
+    } else return null;
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.autoPlay !== prevState.autoPlay || prevProps.interval !== prevState.interval) {
+      this.reset();
+    }
+  }
+
+  stop() {
+    if (this.timer) {
+      clearInterval(this.timer);
+      this.timer = null;
+    }
+  }
+
+  start() {
+    if (this.state.autoPlay) {
+      this.timer = setInterval(this.next, this.state.interval);
+    }
+  }
+
+  reset() {
+    this.stop();
+
+    if (this.state.autoPlay) {
+      this.start();
+    }
+  }
+
+  pressIndicator(index) {
+    this.setState({
+      active: index
+    }, this.reset);
+  }
+
+  next(event) {
+    const next = this.state.active + 1 > this.props.children.length - 1 ? 0 : this.state.active + 1;
+    this.setState({
+      active: next
+    }, this.reset);
+    if (event) event.stopPropagation();
+  }
+
+  prev(event) {
+    const prev = this.state.active - 1 < 0 ? this.props.children.length - 1 : this.state.active - 1;
+    this.setState({
+      active: prev
+    }, this.reset);
+    if (event) event.stopPropagation();
+  }
+
+  render() {
+    const indicators = this.props.indicators !== undefined ? this.props.indicators : true;
+    const animation = this.props.animation !== undefined ? this.props.animation : "fade";
+    return __jsx("div", {
+      className: `Carousel ${this.props.className ? this.props.className : ""}`,
+      onMouseEnter: this.stop,
+      onMouseOut: this.reset,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 119
+      },
+      __self: this
+    }, Array.isArray(this.props.children) ? this.props.children.map((child, index) => {
+      return __jsx(CarouselItem, {
+        key: index,
+        active: index === this.state.active ? true : false,
+        child: child,
+        animation: animation,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 124
+        },
+        __self: this
+      });
+    }) : __jsx(CarouselItem, {
+      key: 0,
+      active: true,
+      child: this.props.children,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 128
+      },
+      __self: this
+    }), __jsx("div", {
+      className: "Next ButtonWrapper",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 131
+      },
+      __self: this
+    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["IconButton"], {
+      className: "Next Button mui--align-middle",
+      onClick: this.next,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 132
+      },
+      __self: this
+    }, __jsx(_material_ui_icons_NavigateNext__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 133
+      },
+      __self: this
+    }))), __jsx("div", {
+      className: "Prev ButtonWrapper",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 137
+      },
+      __self: this
+    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["IconButton"], {
+      className: "Prev Button mui--align-middle",
+      onClick: this.prev,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 138
+      },
+      __self: this
+    }, __jsx(_material_ui_icons_NavigateBefore__WEBPACK_IMPORTED_MODULE_4___default.a, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 139
+      },
+      __self: this
+    }))), indicators ? __jsx(Indicators, {
+      length: this.props.children.length,
+      active: this.state.active,
+      press: this.pressIndicator,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 143
+      },
+      __self: this
+    }) : null);
+  }
+
+}
+
+function CarouselItem(props) {
+  return (// props.active ? 
+    // (
+    __jsx("div", {
+      className: "CarouselItem",
+      hidden: !props.active,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 154
+      },
+      __self: this
+    }, props.animation === "slide" ? __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Slide"], {
+      direction: "left",
+      in: props.active,
+      timeout: 200,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 156
+      },
+      __self: this
+    }, __jsx("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 157
+      },
+      __self: this
+    }, props.child)) : __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Fade"], {
+      in: props.active,
+      timeout: 500,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 162
+      },
+      __self: this
+    }, __jsx("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 163
+      },
+      __self: this
+    }, props.child))) // ) : null
+
+  );
+}
+
+function Indicators(props) {
+  let indicators = [];
+
+  for (let i = 0; i < props.length; i++) {
+    const className = i === props.active ? "Active Indicator" : "Indicator";
+
+    const item = __jsx(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      key: i,
+      size: "small",
+      className: className,
+      onClick: () => {
+        props.press(i);
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 179
+      },
+      __self: this
+    });
+
+    indicators.push(item);
+  }
+
+  return __jsx("div", {
+    className: "Indicators",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 185
+    },
+    __self: this
+  }, indicators);
+}
+
+/***/ }),
+
 /***/ "./components/carousel_card/index.js":
 /*!*******************************************!*\
   !*** ./components/carousel_card/index.js ***!
@@ -314,8 +591,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_material_ui_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-material-ui-carousel */ "react-material-ui-carousel");
-/* harmony import */ var react_material_ui_carousel__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_material_ui_carousel__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Carousel */ "./components/carousel_card/Carousel.js");
 /* harmony import */ var _outer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../outer */ "./components/outer/index.js");
 var _jsxFileName = "/Users/yunqingqi/Documents/GitHub/Portal/leapsheep_nextjs/components/carousel_card/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -344,7 +620,7 @@ function HomeCarousel() {
 }
 
 function component() {
-  return __jsx(react_material_ui_carousel__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  return __jsx(_Carousel__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
@@ -613,8 +889,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _material_ui_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/icons */ "@material-ui/icons");
 /* harmony import */ var _material_ui_icons__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var emailjs_com__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! emailjs-com */ "emailjs-com");
-/* harmony import */ var emailjs_com__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(emailjs_com__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _material_ui_lab__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/lab */ "@material-ui/lab");
+/* harmony import */ var _material_ui_lab__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_lab__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var emailjs_com__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! emailjs-com */ "emailjs-com");
+/* harmony import */ var emailjs_com__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(emailjs_com__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "/Users/yunqingqi/Documents/GitHub/Portal/leapsheep_nextjs/components/contact_us/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -622,13 +900,16 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+
 function Contact() {
+  const [open, setOpen] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(false);
+
   function sendEmail(e) {
     e.preventDefault();
-    emailjs_com__WEBPACK_IMPORTED_MODULE_3___default.a.sendForm('gmail_test', 'leapsheep', e.target, 'user_ktTMKKT4No1antI4E4MSD').then(result => {
+    emailjs_com__WEBPACK_IMPORTED_MODULE_4___default.a.sendForm('gmail_test', 'leapsheep', e.target, 'user_ktTMKKT4No1antI4E4MSD').then(result => {
       console.log(result.text);
-    }, error => {
-      console.log(error.text);
+      setOpen(true);
+    }, error => {// console.log(error.text);
     });
   }
 
@@ -636,16 +917,49 @@ function Contact() {
     id: "contact",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 23
     },
     __self: this
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Dialog"], {
+    open: open,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, __jsx(_material_ui_lab__WEBPACK_IMPORTED_MODULE_3__["Alert"], {
+    action: __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["IconButton"], {
+      "aria-label": "close",
+      color: "inherit",
+      size: "small",
+      onClick: () => {
+        setOpen(false);
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27
+      },
+      __self: this
+    }, __jsx(_material_ui_icons__WEBPACK_IMPORTED_MODULE_2__["Close"], {
+      fontSize: "inherit",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: this
+    })),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, "Thanks for contacting us!")), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
     container: true,
     justify: "center",
     alignItems: "stretch",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 43
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
@@ -657,52 +971,52 @@ function Contact() {
     className: "contact_us",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 46
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Typography"], {
     variant: "h2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 47
     },
     __self: this
   }, " Contact Us"), __jsx(_material_ui_icons__WEBPACK_IMPORTED_MODULE_2__["LocationOn"], {
     className: "location_icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 48
     },
     __self: this
   }), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 49
     },
     __self: this
   }, "Level 1, 33 Pirie Street,", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 49
     },
     __self: this
   }), "Adelaide SA 5000", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 50
     },
     __self: this
   }), "Australia"), __jsx(_material_ui_icons__WEBPACK_IMPORTED_MODULE_2__["Email"], {
     className: "email_icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 53
     },
     __self: this
   }), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 54
     },
     __self: this
   }, "info@leapsheep.biz")), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
@@ -714,7 +1028,7 @@ function Contact() {
     className: "email_us",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 58
     },
     __self: this
   }, __jsx("form", {
@@ -728,7 +1042,7 @@ function Contact() {
     onSubmit: sendEmail,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 59
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Paper"], {
@@ -740,7 +1054,7 @@ function Contact() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 60
     },
     __self: this
   }, __jsx(_material_ui_icons__WEBPACK_IMPORTED_MODULE_2__["Person"], {
@@ -750,7 +1064,7 @@ function Contact() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 61
     },
     __self: this
   }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["InputBase"], {
@@ -761,7 +1075,7 @@ function Contact() {
     required: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 62
     },
     __self: this
   })), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Paper"], {
@@ -773,7 +1087,7 @@ function Contact() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 70
     },
     __self: this
   }, __jsx(_material_ui_icons__WEBPACK_IMPORTED_MODULE_2__["Email"], {
@@ -783,7 +1097,7 @@ function Contact() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 71
     },
     __self: this
   }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["InputBase"], {
@@ -794,7 +1108,7 @@ function Contact() {
     required: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 72
     },
     __self: this
   })), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Paper"], {
@@ -806,7 +1120,7 @@ function Contact() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 80
     },
     __self: this
   }, __jsx(_material_ui_icons__WEBPACK_IMPORTED_MODULE_2__["Create"], {
@@ -816,7 +1130,7 @@ function Contact() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 81
     },
     __self: this
   }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["InputBase"], {
@@ -828,7 +1142,7 @@ function Contact() {
     rows: "6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 82
     },
     __self: this
   })), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Fab"], {
@@ -842,7 +1156,7 @@ function Contact() {
     "aria-label": "submit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 91
     },
     __self: this
   }, "Send")))));
@@ -865,12 +1179,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var emailjs_com__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! emailjs-com */ "emailjs-com");
-/* harmony import */ var emailjs_com__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(emailjs_com__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _material_ui_icons_Twitter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/icons/Twitter */ "@material-ui/icons/Twitter");
-/* harmony import */ var _material_ui_icons_Twitter__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Twitter__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _material_ui_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/icons */ "@material-ui/icons");
+/* harmony import */ var _material_ui_icons__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _material_ui_lab__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/lab */ "@material-ui/lab");
+/* harmony import */ var _material_ui_lab__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_lab__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var emailjs_com__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! emailjs-com */ "emailjs-com");
+/* harmony import */ var emailjs_com__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(emailjs_com__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _material_ui_icons_Twitter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/Twitter */ "@material-ui/icons/Twitter");
+/* harmony import */ var _material_ui_icons_Twitter__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Twitter__WEBPACK_IMPORTED_MODULE_5__);
 var _jsxFileName = "/Users/yunqingqi/Documents/GitHub/Portal/leapsheep_nextjs/components/footer/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
 
 
 
@@ -878,12 +1198,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const message = `Sign up and get early access to our beta program`;
 
 function Footer() {
+  const [open, setOpen] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(false);
+
   function sendEmail(e) {
     e.preventDefault();
-    emailjs_com__WEBPACK_IMPORTED_MODULE_2___default.a.sendForm('gmail_test', 'leapsheep', e.target, 'user_ktTMKKT4No1antI4E4MSD').then(result => {
+    emailjs_com__WEBPACK_IMPORTED_MODULE_4___default.a.sendForm('gmail_test', 'leapsheep', e.target, 'user_ktTMKKT4No1antI4E4MSD').then(result => {
       console.log(result.text);
-    }, error => {
-      console.log(error.text);
+      setOpen(true);
+    }, error => {// console.log(error.text);
     });
   }
 
@@ -895,10 +1217,43 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 25
     },
     __self: this
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Dialog"], {
+    open: open,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, __jsx(_material_ui_lab__WEBPACK_IMPORTED_MODULE_3__["Alert"], {
+    action: __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["IconButton"], {
+      "aria-label": "close",
+      color: "inherit",
+      size: "small",
+      onClick: () => {
+        setOpen(false);
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29
+      },
+      __self: this
+    }, __jsx(_material_ui_icons__WEBPACK_IMPORTED_MODULE_2__["Close"], {
+      fontSize: "inherit",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 37
+      },
+      __self: this
+    })),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }, "Thanks for contacting us!")), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
     container: true,
     wrap: "nowrap",
     spacing: 2,
@@ -907,7 +1262,7 @@ function Footer() {
     alignItems: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 45
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
@@ -918,7 +1273,7 @@ function Footer() {
     lg: 8,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 46
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Typography"], {
@@ -926,7 +1281,7 @@ function Footer() {
     variant: "h5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 47
     },
     __self: this
   }, message)), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
@@ -937,14 +1292,14 @@ function Footer() {
     lg: 8,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 50
     },
     __self: this
   }, __jsx("form", {
     onSubmit: sendEmail,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 51
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Paper"], {
@@ -955,7 +1310,7 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 52
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["InputBase"], {
@@ -971,7 +1326,7 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 53
     },
     __self: this
   }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Fab"], {
@@ -981,7 +1336,7 @@ function Footer() {
     "aria-label": "add",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 61
     },
     __self: this
   }, "Apply Now")))), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
@@ -992,7 +1347,7 @@ function Footer() {
     lg: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 69
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["IconButton"], {
@@ -1000,13 +1355,13 @@ function Footer() {
     href: "https://twitter.com/LeapSheepBiz",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 70
     },
     __self: this
-  }, __jsx(_material_ui_icons_Twitter__WEBPACK_IMPORTED_MODULE_3___default.a, {
+  }, __jsx(_material_ui_icons_Twitter__WEBPACK_IMPORTED_MODULE_5___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 71
     },
     __self: this
   }))), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
@@ -1017,14 +1372,14 @@ function Footer() {
     lg: 8,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 75
     },
     __self: this
   }, __jsx("p", {
     className: "copy_right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 76
     },
     __self: this
   }, "\xA9 2020 LeapSheep Pty Ltd, 615 010 903"))));
@@ -4612,7 +4967,7 @@ function Home(props) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -4668,6 +5023,17 @@ module.exports = require("@material-ui/icons");
 
 /***/ }),
 
+/***/ "@material-ui/icons/FiberManualRecord":
+/*!*******************************************************!*\
+  !*** external "@material-ui/icons/FiberManualRecord" ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/icons/FiberManualRecord");
+
+/***/ }),
+
 /***/ "@material-ui/icons/KeyboardArrowUp":
 /*!*****************************************************!*\
   !*** external "@material-ui/icons/KeyboardArrowUp" ***!
@@ -4701,6 +5067,28 @@ module.exports = require("@material-ui/icons/Menu");
 
 /***/ }),
 
+/***/ "@material-ui/icons/NavigateBefore":
+/*!****************************************************!*\
+  !*** external "@material-ui/icons/NavigateBefore" ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/icons/NavigateBefore");
+
+/***/ }),
+
+/***/ "@material-ui/icons/NavigateNext":
+/*!**************************************************!*\
+  !*** external "@material-ui/icons/NavigateNext" ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/icons/NavigateNext");
+
+/***/ }),
+
 /***/ "@material-ui/icons/Twitter":
 /*!*********************************************!*\
   !*** external "@material-ui/icons/Twitter" ***!
@@ -4709,6 +5097,28 @@ module.exports = require("@material-ui/icons/Menu");
 /***/ (function(module, exports) {
 
 module.exports = require("@material-ui/icons/Twitter");
+
+/***/ }),
+
+/***/ "@material-ui/lab":
+/*!***********************************!*\
+  !*** external "@material-ui/lab" ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/lab");
+
+/***/ }),
+
+/***/ "auto-bind":
+/*!****************************!*\
+  !*** external "auto-bind" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("auto-bind");
 
 /***/ }),
 
@@ -4852,17 +5262,6 @@ module.exports = require("react-ga");
 /***/ (function(module, exports) {
 
 module.exports = require("react-is");
-
-/***/ }),
-
-/***/ "react-material-ui-carousel":
-/*!*********************************************!*\
-  !*** external "react-material-ui-carousel" ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("react-material-ui-carousel");
 
 /***/ }),
 

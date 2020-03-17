@@ -80,20 +80,6 @@
 }
 
 
-.ant-carousel .slick-dots li button{
-    color: black !important;
-    width: 25px  !important;
-    background-color: black !important;
-}
-
-.ant-carousel .slick-dots li.slick-active button{
-    color: #ff7510 !important;
-    width: 35px !important;
-    background-color:#ff7510 !important;
-}
-.ant-carousel .slick-dots li{
-    margin-right: 10px !important;
-}
 .words{
     position: relative;
     background-color: #fff;
@@ -580,6 +566,8 @@
 body{
     letter-spacing: 0 !important;
 }
+
+/* carousal */
 .Carousel {
     position: relative;
 }
