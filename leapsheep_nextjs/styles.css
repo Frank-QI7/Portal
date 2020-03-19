@@ -37,18 +37,6 @@
 
 }
 
-#advisor .team_member{
-    position: 952px 52px;
-    width: 258px 56px;
-    padding: 0 12 5 5;
-    color: #000;
-    font-family:'Open Sans';
-    font-size: 14px;
-    font-weight: normal;
-    font-style: normal;
-    border: solid 2px #a9a9a9;
-}
-
 #advisor .team_member p{
     margin-bottom: 7px;
     font-size: 24px !important;
