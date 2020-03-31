@@ -20,7 +20,7 @@
     "auto-bind": "^4.0.0",
     "babel-plugin-import": "^1.13.0",
     "emailjs-com": "^2.4.1",
-    "next": "^9.2.2",
+    "next": "^9.3.2",
     "nextjs-fonts": "^0.22.0",
     "node-sass": "^4.13.1",
     "react": "^16.13.0",
