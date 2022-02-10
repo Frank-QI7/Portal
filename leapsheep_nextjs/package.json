@@ -22,7 +22,7 @@
     "emailjs-com": "^2.4.1",
     "next": "^9.2.2",
     "nextjs-fonts": "^0.22.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-ga": "^2.7.0"
